@@ -1,0 +1,10 @@
+﻿<Window x:Class="PeopleApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:PeopleApp"
+        xmlns:views="clr-namespace:PeopleApp.Views"
+        Title="Person Application" Height="450" Width="800">
+    <Grid>
+        <views:PersonListView />
+    </Grid>
+</Window>
