@@ -1,0 +1,23 @@
+﻿<Window x:Class="BirtdayApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:BirtdayApp.ViewModels"
+        Title="Date of Birth App" Height="450" Width="800">
+    <Grid DataContext="{Binding}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <TextBlock Text="Date of Birth:" VerticalAlignment="Center" />
+            <DatePicker SelectedDate="{Binding DateOfBirth}" Margin="5" />
+            <Button Command="{Binding CalculateCommand}" Content="Calculate" Margin="5" />
+        </StackPanel>
+        <StackPanel Grid.Row="1" Margin="10">
+            <TextBlock Text="{Binding AgeText}" />
+            <TextBlock Text="{Binding BirthdayMessage}" FontWeight="Bold" />
+            <TextBlock Text="{Binding WesternZodiac}" />
+            <TextBlock Text="{Binding ChineseZodiac}" />
+        </StackPanel>
+    </Grid>
+</Window>
